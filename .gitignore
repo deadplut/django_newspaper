@@ -1,3 +1,4 @@
 .idea/
 venv/
 **/settings_ignored.py
+*.sqlite3
