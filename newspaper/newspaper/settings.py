@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 from .settings_ignored import TOKEN_DJANGO
@@ -124,3 +124,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Основной url для управления медиафайлами
+MEDIA_URL = '/media/'
+
+# Путь хранения картинок
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+
+
