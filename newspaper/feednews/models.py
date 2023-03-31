@@ -19,3 +19,6 @@ class News(models.Model):
     date_update = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField()
     image_id = models.ForeignKey(Images, on_delete=models.CASCADE, default=None)
+
+    def __str__(self):
+        return self.title
