@@ -1,0 +1,13 @@
+.header {
+    background: url(https://teroni.ru/templates/BloggyRed/images/bg2.png) repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    height: 60px;
+    padding: 10px 0;
+    width: 100%;
+    z-index: 999;
+    white-space: nowrap;
+}
