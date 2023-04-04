@@ -1,13 +1,51 @@
 .header {
-    background: url(https://teroni.ru/templates/BloggyRed/images/bg2.png) repeat;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
-    right: auto;
-    bottom: auto;
-    height: 60px;
-    padding: 10px 0;
     width: 100%;
-    z-index: 999;
-    white-space: nowrap;
+    justify-content: center;
+
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+.main-wrapper{
+
+}
+
+
+@font-face {
+// название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
+font-family: "Englisht";
+// адрес шрифта и тип
+src: url("../fonts/englisht.ttf") format("truetype");
+font-style: normal;
+font-weight: normal;
+}
+
+
+/* Код для подключения шрифта в /css/stylename.css */
+
+	@font-face {
+			font-family: "NewYT";
+
+			src:
+			url("../fonts/misc/NewYT.woff") format("woff");,
+			/*url("../fonts/AaarghRegular/AaarghRegular.ttf") format("truetype");*/
+			font-style: normal;
+			font-weight: normal;
+	}
+
+	@font-face {
+			font-family: "AaarghBold";
+			src: url("../fonts/AaarghBold/AaarghBold.eot");
+			src: url("../fonts/AaarghBold/AaarghBold.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/AaarghBold/AaarghBold.woff") format("woff"),
+			url("../fonts/AaarghBold/AaarghBold.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+	}
+.logo{
+    font-family: "NewYT";
 }
