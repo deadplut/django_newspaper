@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Newspaper</title>
+    <title>{{title}}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'feednews/style.css'%}">
 </head>
@@ -11,6 +11,9 @@
         <div class="header ">
             <h3 class="logo flex">Newspaper</h3>
         </div>
+        {%for cat in cats%}
+        <div>{{ cat }}</div>
+        {% endfor %}
         <div class="wrapper-content">
 
             {%for item in news%}
@@ -19,7 +22,7 @@
                 <p class="article-summary hover">{{item.text}}</p>
                 <span class="w-35 ">{{item.date_creation}}</span>
                 <div class="wrapper-image hover">
-                    <img class="new-img-main" src="{%  static item.image_id.image.url %}" alt="Ошибка ыыы"></div>
+                    <img class="new-img-main" src="{{ item.image.image.url }}" alt="Ошибка ыыы"></div>
             </div>
             {% endfor %}
 
