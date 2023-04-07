@@ -48,4 +48,11 @@ font-weight: normal;
 	}
 .logo{
     font-family: "NewYT";
+	width: 100vw;
+    text-align: center;
+	border-bottom: 1px solid #e7e7e7;
+	border-top: 1px solid #e7e7e7;
+	margin: 0;
+	padding: .5em;
+	background-color: white;
 }
