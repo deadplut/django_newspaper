@@ -1,9 +1,9 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Хех Мда</title>
+    <title>Newspaper</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'feednews/style.css'%}">
 </head>
 <body>
@@ -12,34 +12,17 @@
             <h3 class="logo flex">Newspaper</h3>
         </div>
         <div class="wrapper-content">
+
+            {%for item in news%}
             <div class="wrapper-item flex">
-                <h1 class="article-title hover">Инцидент не исчерпан: обереги никого не защитили</h1>
-                <p class="article-summary hover">Ясность нашей позиции очевидна: экономическая повестка сегодняшнего дня является качественно новой ступенью инновационных методов управления процессами. Для современного мира понимание сути ресурсосберегающих технологий не оставляет шанса для вывода текущих активов.</p>
-                <span class="w-35 ">April 7, 2023, 5:00 a.m. ET</span>
+                <h1 class="article-title hover">{{item.title}}</h1>
+                <p class="article-summary hover">{{item.text}}</p>
+                <span class="w-35 ">{{item.date_creation}}</span>
                 <div class="wrapper-image hover">
-                    <img class="new-img-main" src="https://static01.nyt.com/images/2023/03/31/multimedia/31trump-indicted-defense-02-jmpz/31trump-indicted-defense-02-jmpz-jumbo.jpg?quality=75&auto=webp" alt="Ошибка ыыы"></div>
+                    <img class="new-img-main" src="{%  static item.image_id.image.url %}" alt="Ошибка ыыы"></div>
             </div>
-            <div class="wrapper-item flex">
-                <h1 class="article-title hover">Инцидент не исчерпан: обереги никого не защитили</h1>
-                <p class="article-summary hover">Ясность нашей позиции очевидна: экономическая повестка сегодняшнего дня является качественно новой ступенью инновационных методов управления процессами. Для современного мира понимание сути ресурсосберегающих технологий не оставляет шанса для вывода текущих активов.</p>
-                <span class="w-35 ">April 7, 2023, 5:00 a.m. ET</span>
-                <div class="wrapper-image hover">
-                    <img class="new-img-main" src="https://static01.nyt.com/images/2023/03/31/multimedia/31trump-indicted-defense-02-jmpz/31trump-indicted-defense-02-jmpz-jumbo.jpg?quality=75&auto=webp" alt="Ошибка ыыы"></div>
-            </div>
-            <div class="wrapper-item flex">
-                <h1 class="article-title hover">Инцидент не исчерпан: обереги никого не защитили</h1>
-                <p class="article-summary hover">Ясность нашей позиции очевидна: экономическая повестка сегодняшнего дня является качественно новой ступенью инновационных методов управления процессами. Для современного мира понимание сути ресурсосберегающих технологий не оставляет шанса для вывода текущих активов.</p>
-                <span class="w-35 ">April 7, 2023, 5:00 a.m. ET</span>
-                <div class="wrapper-image hover">
-                    <img class="new-img-main" src="https://static01.nyt.com/images/2023/03/31/multimedia/31trump-indicted-defense-02-jmpz/31trump-indicted-defense-02-jmpz-jumbo.jpg?quality=75&auto=webp" alt="Ошибка ыыы"></div>
-            </div>
-            <div class="wrapper-item flex">
-                <h1 class="article-title hover">Инцидент не исчерпан: обереги никого не защитили</h1>
-                <p class="article-summary hover">Ясность нашей позиции очевидна: экономическая повестка сегодняшнего дня является качественно новой ступенью инновационных методов управления процессами. Для современного мира понимание сути ресурсосберегающих технологий не оставляет шанса для вывода текущих активов.</p>
-                <span class="w-35 ">April 7, 2023, 5:00 a.m. ET</span>
-                <div class="wrapper-image hover">
-                    <img class="new-img-main" src="https://static01.nyt.com/images/2023/03/31/multimedia/31trump-indicted-defense-02-jmpz/31trump-indicted-defense-02-jmpz-jumbo.jpg?quality=75&auto=webp" alt="Ошибка ыыы"></div>
-            </div>
+            {% endfor %}
+
 
         </div>
 
