@@ -16,7 +16,7 @@ class Images(models.Model):
 
 
 class News(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=200, verbose_name="title1234")
     text = models.TextField()
     author = models.CharField(max_length=200)
     date_creation = models.DateTimeField(auto_now_add=True)

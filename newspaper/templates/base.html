@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'feednews/style.css'%}">
+</head>
+<body>
+    <div class="main-wrapper flex">
+        <div class="header ">
+            <h3 class="logo flex">Newspaper</h3>
+
+        </div>
+
+        <div class="wrapper-content">
+            <div class="categories">
+
+                {%for cat in cats%}
+                    <a href="{% url 'category' cat.pk %}" class="cat">{{ cat.name }}</a>
+                {% endfor %}
+
+            </div>
+{% block content %}
+{% endblock %}
+               </div>
+
+    </div>
+</body>
+</html>
