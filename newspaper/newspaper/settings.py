@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'feednews.apps.FeednewsConfig',
+    "debug_toolbar",
+    'crispy_forms',
+    'crispy_bootstrap4',
+
 ]
 
 MIDDLEWARE = [
@@ -50,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
 ROOT_URLCONF = 'newspaper.urls'
@@ -137,6 +142,12 @@ MEDIA_URL = '/media/'
 # Путь хранения картинок
 MEDIA_ROOT = BASE_DIR / 'media'
 
-
-
-print(BASE_DIR)
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+#
+# CRISPY_TEMPLATE_PACK = "bootstrap4"

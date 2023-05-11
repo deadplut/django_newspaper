@@ -2,9 +2,10 @@ from django.contrib import admin
 
 from .models import *
 
+
 # class ImagesAdmin(admin.TabularInline):
 #     model = Images
-#TODO дз: Как сделать красиво InlineModelAdmin
+# TODO дз: Как сделать красиво InlineModelAdmin
 # TODo посмотреть аттрибуты
 # TODo сделать категории в include
 # Register your models here.
@@ -27,10 +28,11 @@ class NewsInline(admin.TabularInline):
 class CategoriesAdmin(admin.ModelAdmin):
     inlines = (NewsInline,)
 
+
+@admin.register(Books)
+class BooksAdmin(admin.ModelAdmin):
+    list_filter = ("year", "price")
+
+
 # admin.site.register(Categories)
 admin.site.register(Images)
-
-
-
-
-

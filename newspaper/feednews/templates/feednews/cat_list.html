@@ -1,0 +1,8 @@
+<div class="categories">
+
+    {%for cat in cats%}
+    <a href="{{ cat.get_absolute_url }}" class="cat">{{ cat.name }}</a>
+    <div>{{ cat.count_news }}</div>
+    {% endfor %}
+
+</div>

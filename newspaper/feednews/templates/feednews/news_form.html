@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+crispy
+<form method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+                <label for="{{ form.title.id_for_label }}" class="form-label">{{ form.title.label }}</label>
+                {{ form.title }}
+                <div class="invalid-feedback">
+                    {{ form.title.errors }}
+                </div>
+            </div>
+
+
+    <input type="submit" value="Update">
+</form>
+
+
+<!--{% load crispy_forms_tags %}-->
+
+<!--&lt;!&ndash;Contact form&ndash;&gt;-->
+<!--<div style="margin:80px">-->
+<!--	<h1>Contact</h1>-->
+<!--	<h4>Contact us directly if you have any questions</h4>-->
+<!--		<p>Please write your name, email address and a message below if you have any questions. One of our staff members will be happy to contact you directly and answer your questions as soon as possible. </p>-->
+<!--	<form method="post">-->
+<!--        {% csrf_token %}-->
+<!--		{% crispy form %}-->
+<!--        </form>-->
+<!--</div>-->
+{% endblock %}

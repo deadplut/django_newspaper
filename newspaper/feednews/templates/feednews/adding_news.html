@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+<form action="{% url 'adding_news' %}" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Новая запись</legend>
+                {{ form.title }}
+            </fieldset>
+</form>
+
+
+{% endblock %}
+
